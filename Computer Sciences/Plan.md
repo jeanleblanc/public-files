@@ -1,22 +1,26 @@
 # Foundation
 - Basic computer science.
 > https://www.youtube.com/watch?v=tpIctyqH29Q&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&pp=iAQB
-
 > https://inst.eecs.berkeley.edu/~cs61c/fa19/
+
 - Structure and computer program interpretation
 > https://inst.eecs.berkeley.edu/~cs61a/sp20/
+
 - Data structure
 > https://sp21.datastructur.es/
+
 - Math
 > Basic mathematic by Serge Lang
-
 > https://www.amazon.com/Discrete-Mathematics-Applications-Susanna-Epp/dp/1337694193/ref=sr_1_1?dchild=1&keywords=discrete+epp&qid=1627280503&s=books&sr=1-1
 # OS : linux
 https://www.youtube.com/watch?v=rrB13utjYV4&list=PL0vfts4VzfNiI1BsIK5u7LpPaIDKMJIDN&index=109&ab_channel=Fireship
 - Linux
 > https://christitus.com/choose-linux-distro/
-
 > https://www.youtube.com/watch?v=VbEx7B_PTOE&list=PLIhvC56v63IJIujb5cyE13oLuyORZpdkL&pp=iAQB
+> https://www.reddit.com/r/linuxupskillchallenge/comments/167jw20/please_read_this_first_how_this_works_faq/
+> https://github.com/mikeroyal/Linux-Guide
+> Introduction to Linux by Machtelt Garrels
+> 
 
 
 ## Terminal & Bash
@@ -37,13 +41,10 @@ https://www.youtube.com/watch?v=I4EWvMFj37g&ab_channel=Fireship
 
 More advenced : 
 > https://github.com/dylanaraps/pure-bash-bible
-
 ## Git & Github
 https://youtu.be/hwP7WQkmECE?si=JFp0OmFyYMpWH7lU
 > https://git-scm.com/book/en/v2
 > https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud
-> 
-
 ## Markdown
 https://youtu.be/-MXwHMHfF8k?si=8stimiQWG5p4OpOc
 https://www.markdownguide.org/getting-started/
@@ -96,13 +97,9 @@ https://youtu.be/WqKluXIra70?si=HHYkrZ2FR4MYSiVy
 
 - VS code
 https://youtu.be/KMxo3T_MTvY?si=NztpDfPFLv_2X9zb
-
-# More
-- Arch
-> https://wiki.archlinux.org/
-> https://wiki.archlinux.org/title/archinstall
-- Tails OS
-- Optimisation & practice
+https://code.visualstudio.com/docs/editor/codebasics
+https://youtu.be/ifTF3ags0XI?si=PyHYhSPfDFipl6Ak
+https://youtu.be/u21W_tfPVrY?si=sCa0Dc64fX11V6XS
 # Specialisation
 
 ## Web dev
@@ -121,3 +118,12 @@ https://youtu.be/5YDVJaItmaY?si=2WdRic7q40X3JTpK
 > https://cs193p.sites.stanford.edu/
 
 Creddit : https://www.reddit.com/r/learnprogramming/comments/ortnef/a_super_harsh_guide_to_learning_computer_science/?rdt=41892
+https://www.reddit.com/r/linuxquestions/comments/125dn50/a_good_guide_to_learn_linux_from_zero/
+
+# More
+- Arch
+> https://wiki.archlinux.org/
+> https://wiki.archlinux.org/title/archinstall
+- Tails OS
+- Plex
+- Optimisation & practice
