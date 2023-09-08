@@ -19,20 +19,13 @@ https://encyclopediaofmath.org/wiki/Special:AllPages
 - **Number theory** : An Introduction to the Theory of Numbers y G. H. Hardy & E. M. Wright
 - **Graph theory** : Graph theory by Reinhard Diestel
 - **Topology** : Topology by James R. Munkres
-
-The Nature of Pure Mathematical Knowledge
-4.1. Axioms and definitions
-4.2. Theorems and proofs
-4.3. Abstraction and generalization
-4.4. The role of intuition and creativity in pure mathematics
-
 # More applied mathematics
 
 - **Physics math**
 - **Biology math**
 - **Finance math** : Mathematics for Finance: An Introduction to Financial Engineering by Marek Capinski & Tomasw Zastawniak
-- **Controle theory** : # Feedback Systems: An Introduction for Scientists and Engineers by Karl John Astrom & Richard M. Murray
-- **Math Modeling** : # Nonlinear Dynamics and Chaos: With Applications to Physics, Biology, Chemistry, and Engineering by Steven H. Strogatz
+- **Controle theory** : Feedback Systems: An Introduction for Scientists and Engineers by Karl John Astrom & Richard M. Murray
+- **Math Modeling** : Nonlinear Dynamics and Chaos: With Applications to Physics, Biology, Chemistry, and Engineering by Steven H. Strogatz
 
 # Philosophy of Mathematics
 > Thinking about mathematics : the philosophy of mathematics by stewart shapiro

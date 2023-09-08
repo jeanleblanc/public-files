@@ -11,16 +11,17 @@
 
 - Math
 > Basic mathematic by Serge Lang
-> https://www.amazon.com/Discrete-Mathematics-Applications-Susanna-Epp/dp/1337694193/ref=sr_1_1?dchild=1&keywords=discrete+epp&qid=1627280503&s=books&sr=1-1
+   Discrete Mathematics with Applications by Susanna S Epp
 # OS : linux
 https://www.youtube.com/watch?v=rrB13utjYV4&list=PL0vfts4VzfNiI1BsIK5u7LpPaIDKMJIDN&index=109&ab_channel=Fireship
 - Linux
+How Linux Works, 3rd Edition: What Every Superuser Should Know by Brian Ward 
 > https://christitus.com/choose-linux-distro/
 > https://www.youtube.com/watch?v=VbEx7B_PTOE&list=PLIhvC56v63IJIujb5cyE13oLuyORZpdkL&pp=iAQB
 > https://www.reddit.com/r/linuxupskillchallenge/comments/167jw20/please_read_this_first_how_this_works_faq/
 > https://github.com/mikeroyal/Linux-Guide
 > Introduction to Linux by Machtelt Garrels
-> 
+> How Linux Works, 3rd Edition: What Every Superuser Should Know by B Ward
 
 
 ## Terminal & Bash
