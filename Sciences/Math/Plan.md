@@ -4,6 +4,7 @@ https://encyclopediaofmath.org/wiki/Special:AllPages
 # Pure math (and principal applied math)
 
 - **Calculus** : Calculus by Stewart
+				 Calculus by Michael Spivak
 - **Algebra** : Beginning and intermediate algebra by Tyler Wallace
 - **Geometry** : Tuto in a book's Geometry by Jo Grieg
 - **Trigonometry** : 

@@ -3,6 +3,9 @@
 > https://www.youtube.com/watch?v=tpIctyqH29Q&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&pp=iAQB
 > https://inst.eecs.berkeley.edu/~cs61c/fa19/
 
+> Introduction to the Theory of Computation by Michael Sipser
+> https://en.wikipedia.org/wiki/Church%E2%80%93Turing_thesis
+
 - Structure and computer program interpretation
 > https://inst.eecs.berkeley.edu/~cs61a/sp20/
 
