@@ -1,6 +1,6 @@
-
-# General physics
-## Book
+# Physics Plan
+## General physics
+### Book
 - Physics: Principles with Applications by Douglas C. Giancoli (*parfait pour tout le monde, parle un peu de tout*)
 - Fundamentals of Physics by David Halliday, Robert Resnick & Jearl Walker (un grand classic mais pas assez d'info comparé a Giancoli)
 - The Feynman Lectures on Physics, boxed set: The New Millennium Edition (très interessant, un must read)
@@ -21,7 +21,8 @@
 -  (*Math ! Vector analysis*)
 - The visual display f quantitative information (*Pas sur la physique, about figures*)
 - Alex's Adventures in Numberland by Alex Bellos (Introduction au math pour la physique )
-# Theoretical physics
+
+## Theoretical physics
 Based on : https://www.goodtheorist.science/primarymathematics.html
 https://www.reddit.com/r/TheoreticalPhysics/comments/hqq11a/what_exactly_is_theoretical_physics/
 - **Calculus**
@@ -50,7 +51,8 @@ https://www.reddit.com/r/TheoreticalPhysics/comments/hqq11a/what_exactly_is_theo
 - **Supersymetry and gravity** : Supersymmetry and Supergravity: Revised Edition by Julius Wess & Johnathan Bagger
 - **Astroparticle physics** : Particle Astrophysics (Oxford Master Series in Physics) by Donald H. Perkins
 - **Super string theory** : String theory note by Dr. David Tong
-# Cosmology
+
+## Cosmology
 - https://simple.wikipedia.org/wiki/Timeline_of_the_far_future
 - Introduction to cosmology by Barbara Ryden (begginer friendly)
 - Modern Cosmology by Scott Dodelson and Fabian Schmitt (more advenced)
@@ -58,15 +60,7 @@ https://www.reddit.com/r/TheoreticalPhysics/comments/hqq11a/what_exactly_is_theo
 - A brief history of time by Stephen Hawking
 - The First Three Minutes: A Modern View of the Origin of the Universe by Steven Weinberg
 
-
-
-
-
-
-
-
-
-
+## Other ressources
 https://oyc.yale.edu/physics/phys-200
 nimporte quelle video de Feynman sur youtube
 https://www.goodtheorist.science/

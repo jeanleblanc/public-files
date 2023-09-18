@@ -1,7 +1,9 @@
+# Math Plan
+
 https://www.reddit.com/r/learnmath/comments/8p922p/list_of_websites_ebooks_downloads_etc_for_mobile/
 https://encyclopediaofmath.org/wiki/Special:AllPages
 
-# Pure math (and principal applied math)
+## Pure math (and principal applied math)
 
 - **Calculus** : Calculus by Stewart
 				 Calculus by Michael Spivak
@@ -20,7 +22,7 @@ https://encyclopediaofmath.org/wiki/Special:AllPages
 - **Number theory** : An Introduction to the Theory of Numbers y G. H. Hardy & E. M. Wright
 - **Graph theory** : Graph theory by Reinhard Diestel
 - **Topology** : Topology by James R. Munkres
-# More applied mathematics
+## More applied mathematics
 
 - **Physics math**
 - **Biology math**
@@ -28,10 +30,10 @@ https://encyclopediaofmath.org/wiki/Special:AllPages
 - **Controle theory** : Feedback Systems: An Introduction for Scientists and Engineers by Karl John Astrom & Richard M. Murray
 - **Math Modeling** : Nonlinear Dynamics and Chaos: With Applications to Physics, Biology, Chemistry, and Engineering by Steven H. Strogatz
 
-# Philosophy of Mathematics
+## Philosophy of Mathematics
 > Thinking about mathematics : the philosophy of mathematics by stewart shapiro
 > https://youtube.com/playlist?list=PLg5tKDNI_a86OO6J9HuIngyROBsUqcf_z&si=bi2Ve6wAWsR5ma9i
-# The beauty of Mathematics
+## The beauty of Mathematics
 Topology from the Differentiable Viewpoint by John Milnor
-# History of Math
+## History of Math
 The Mathematical Experience: A National Book Award Winner by Phillip J. Davis & Reuben Hersh
