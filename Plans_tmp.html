@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Plans.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="list-of-book">List of Book</h1>
+<h2 id="philosophy">Philosophy</h2>
+<ul>
+<li>Think by Simon blackbrun</li>
+<li>Philocomix by AL Combeaud</li>
+<li>Analyser un film : de l'emotion a l'interpretation par laurent jullier</li>
+<li>Thinking about mathematics : the philosophy of mathematics by stewart shapiro</li>
+</ul>
+<h2 id="cinema">Cinema</h2>
+<ul>
+<li>Qu'est ce que le cinema par andré bazin</li>
+</ul>
+<h2 id="art">Art</h2>
+<ul>
+<li>Mirror of the world : A new History of art by Julian Bell</li>
+<li>The visual display f quantitative information (<em>Pas sur la physique, about figures</em>)</li>
+</ul>
+<h2 id="math">Math</h2>
+<ul>
+<li>Tutor in a book's geometry by Jo greig</li>
+<li>An introduction to the theory of numbers by G H Hardy</li>
+<li>Topology from the differentiable viewpoint : 21 by John Milnor</li>
+<li>Godel's proof by E Nagel</li>
+<li>Logicomix by A Doxiadls</li>
+<li>Basic mathematic by Serge Lang</li>
+<li>Calculus by Stewart</li>
+<li>Beginning and intermediate algebra by Tyler Wallace</li>
+<li>Trigonometry with michael corral</li>
+<li>Mathematical Statistics and Data Analysis by John A. Rice</li>
+<li>Concrete mathematics  by Ronald L. Graham, Donald E. Knuth &amp; Oren Patashnik</li>
+<li>Ordinary differential equations, an elementary textbook for students of mathematics, engineeringand the sciences by Morris Tenenbaum &amp; Harry Pollard</li>
+<li>Linear algebra done right by Sheldon Axler</li>
+<li>Algebra by Michael Artin</li>
+<li>Complex Analysis by Theodore W. Gamelin</li>
+<li>Complex analysis by Lars Ahlfors</li>
+<li>Graph theory by Reinhard Diestel</li>
+<li>Topology by James R. Munkres</li>
+<li>Mathematics for Finance: An Introduction to Financial Engineering by Marek Capinski &amp; Tomasw Zastawniak</li>
+<li>Feedback Systems: An Introduction for Scientists and Engineers by Karl John Astrom &amp; Richard M. Murray</li>
+<li>Nonlinear Dynamics and Chaos: With Applications to Physics, Biology, Chemistry, and Engineering by Steven H. Strogatz</li>
+<li>The Mathematical Experience: A National Book Award Winner by Phillip J. Davis &amp; Reuben Hersh</li>
+<li>Alex's Adventures in Numberland by Alex Bellos (Introduction au math pour la physique )</li>
+<li>The Elegant Universe: Superstrings, Hidden Dimensions, and the Quest for the Ultimate Theory by Brian Greene (<em>Introduction a la mechanique quantique car necessaire pour la suite -&gt; string theory</em>)</li>
+</ul>
+<h2 id="physics">Physics</h2>
+<ul>
+<li>Physics: Principles with Applications by Douglas C. Giancoli (<em>parfait pour tout le monde, parle un peu de tout</em>)</li>
+<li>Fundamentals of Physics by David Halliday, Robert Resnick &amp; Jearl Walker (un grand classic mais pas assez d'info comparé a Giancoli)</li>
+<li>The Feynman Lectures on Physics, boxed set: The New Millennium Edition (très interessant, un must read)</li>
+<li>Schaum's Outline of Modern Physics by Ronald Gautreau (<em>moderne physics</em>)</li>
+<li>Schaum's Outline of Applied Physics by Arthur Beiser (pas mal mais le suivant est mieux, commence très simple donc motivant)</li>
+<li>Schaum's Outline of Physics for Engineering and Science by Michael Browne (necessite de solide base en calculus)</li>
+<li>Schaum's 3,000 Solved Problems in Physics by Alvin Halpern (demande vrmt de la determination et de l'effort)</li>
+<li>Schaum's Outline of College Physics (Facile et demande pas de calculus)</li>
+<li>Conceptual Physics by Paul G. Hewitt (parfait pour commencer a bas niveau, assez débutant)</li>
+<li>University Physics with Modern Physics (très bien, va très bien avec le Giancoli)</li>
+<li>Six Not-So-Easy Pieces: Einstein's Relativity, Symmetry, and Space-Time By Richard Feynman <em>Sur la relativité</em></li>
+<li>Physics of the Impossible: A Scientific Exploration of the World of Phasers, Force Fields, Teleportation and Time Travel by Michio Kaku</li>
+<li>Quantum: Einstein, Bohr and the Great Debate About the Nature of Reality by Manjit Kumar (<em>Quantum mechanics in a chronologic way</em>)</li>
+<li>In Search of Schrodinger's Cat by John Gribbin (<em>Approche moins chronologique</em>)</li>
+<li>Six Easy Pieces: Essentials of Physics Explained by Its Most Brilliant Teacher By Richard Feynman</li>
+<li>Introduction to classical mechanics with problems and solutions by David Morin</li>
+<li>Concepts in Thermal Physics by Stephen J. Blundell &amp; Katherine M. Blundell</li>
+<li>Introduction to Electrodynamics by David J. Griffiths</li>
+<li>Introduction to Quantum Mechanics by David J. Griffiths</li>
+<li>A Brief Review of Elementary Quantum Chemistry by C. David Sherrill</li>
+<li>Five lectures on effective field theory by David B. Kaplan</li>
+<li>Plasma Physics by Richard Fitzpatrick</li>
+<li>ESSENTIAL PHYSICS Part 1 RELATIVITY, PARTICLE DYNAMICS, GRAVITATION, AND WAVE MOTION by Frank W. K. Firk</li>
+<li>A Modern Approach to Quantum Mechanics by John Townsend</li>
+<li>Modern Quantum Mechanics by J. J. Sakurai &amp; Jim Napolitano</li>
+<li>Introduction to Phenomenology by Robert Sokolowski</li>
+<li>Spacetime and Geometry: An Introduction to General Relativity</li>
+<li>A Modern Introduction to Quantum Field Theory by Professor Michele Maggiore</li>
+<li>Supersymmetry and Supergravity: Revised Edition by Julius Wess &amp; Johnathan Bagger</li>
+<li>Particle Astrophysics (Oxford Master Series in Physics) by Donald H. Perkins</li>
+<li>String theory note by Dr. David Tong</li>
+</ul>
+<h2 id="cosmology-astrophysics-and-astronomy">Cosmology, astrophysics and astronomy</h2>
+<ul>
+<li>An Introduction to Modern Astrophysics by Bradley W. Caroll &amp; Dale A. Ostlie</li>
+<li>Stars by H A Rey</li>
+<li>Star Ware : the amateru astronomer's utlimate guide to chossing, buying and using telescopes and accessories by P S Harrington</li>
+<li>Backyard Astronomer's guide by T Dickinson</li>
+<li>The Cambridge Star Atlas By W Tirion</li>
+<li>Nightwatch: A Practical Guide to Viewing the Universe by Terence Dickinson</li>
+<li>Introduction to cosmology by Barbara Ryden (begginer friendly)</li>
+<li>Modern Cosmology by Scott Dodelson and Fabian Schmitt</li>
+<li>Cosmos by Carl Sagan</li>
+<li>The First Three Minutes: A Modern View of the Origin of the Universe by Steven Weinberg</li>
+</ul>
+<h2 id="computer-science">Computer science</h2>
+<ul>
+<li>Building Microservices by S Newman</li>
+<li>Learning python  : powerful object oriented programming by M Lutz</li>
+<li>The C programming language by Kerninghan</li>
+<li>How Linux Works, 3rd Edition: What Every Superuser Should Know by Brian Ward</li>
+<li>Introduction to Linux by Machtelt Garrels</li>
+<li>bash Idioms Write Powerful, Flexible, Readable Shell Scripts by Carl Albing &amp; JP Vossen</li>
+<li>The markdown guide by Mark Cone</li>
+<li>Python for Every body</li>
+<li>Automate the boring stuff with python</li>
+<li>Practical Vim : Edit text at the speed of thought by Drew Neil</li>
+</ul>
+<h2 id="ia">IA</h2>
+<ul>
+<li>Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems by Aurélien Géron</li>
+</ul>
+<h2 id="music">Music</h2>
+<ul>
+<li>Twentieth-Century Harmony: Creative Aspects and Practice by vincent Persichetti</li>
+<li>Fundamentals of Musical Composition Arnold Schoenberg</li>
+<li>Classical Form: A Theory of Formal Functions for the Instrumental Music of Haydn, Mozart, and Beethoven</li>
+<li>Analyzing Classical Form: An Approach for the Classroom by William E. Caplin</li>
+<li>In the Process of Becoming: Analytic and Philosophical Perspectives on Form in Early Nineteenth-Century Music by Janet Schmalfeldt</li>
+<li>The Geometry of Musical Rhythm by Godfried T. Toussaint</li>
+<li>Analysis of Tonal Music: A Schenkerian Approach by Allen Cadwallader &amp; David Gagne</li>
+<li>Chopin: A Graded Practical Guide by Elizabeth Bailie</li>
+<li>Chopin: The Four Ballades by Jim Samson</li>
+<li>The Lives of the Great Composers by Harol C. Schonberg</li>
+<li>Classical Style: Haydn, Mozart, Beethoven by Charles Rosen</li>
+<li>The Romantic Generation (The Charles Eliot Norton Lectures) by Charles Rosen</li>
+<li>The Rest is Noise Listening to the Twentieth Century by Ross Alexander</li>
+<li>Shostakovich: A Life Remembered by Elizabeth Wilson</li>
+</ul>
+<h2 id="enginneering">Enginneering</h2>
+<ul>
+<li>An introduction to mechanical engineering by</li>
+<li>Materials science and engineering : an introduction by W Callister</li>
+<li>QED: The Strange Theory of Light and Matter by Richard Feynman</li>
+<li>Why Does E=mc2?: (And Why Should We Care?) by Brian Cox and Jeff Forshaw</li>
+<li>Space Mission Analysis and Design by J R Wertz &amp; W J Larson</li>
+<li>Aircraft Design: A Conceptual Approach (Aiaa Education Series) by D P Raymer</li>
+<li>Introduction to Flight by John Anderson</li>
+<li>Fundamentals of Aerodynamics By John Anderson</li>
+<li>The Art of Electronics by Paul Horowitz &amp; W Hill</li>
+<li>Teach Yourself Electricity and Electronics by Stan Gibilisco &amp; Simon Monk</li>
+<li>Shigley's Mechanical Engineering Design, 11th Edition, Si Units by R Budynas &amp; K Nisbett</li>
+</ul>
+<h2 id="cooking">Cooking</h2>
+<ul>
+<li>On Food and Cooking: The Science and Lore of the Kitchen</li>
+<li>The America's Test Kitchen Cooking School Cookbook: Everything You Need to Know to Become a Great Cook</li>
+<li>Salt, Fat, Acid, Heat: Mastering the Elements of Good Cooking</li>
+<li>Joy of Cooking</li>
+<li>How to Cook Everything The Basics by Mark Bittman</li>
+</ul>
+<h2 id="autre">Autre</h2>
+<ul>
+<li>Propaganda by Edward Bernays</li>
+</ul>
+<h1 id="cooking-plan">Cooking Plan</h1>
+<p>https://www.reddit.com/r/Cooking/comments/aym0y6/list_of_online_resources_for_beginner_cooks_and/</p>
+<h2 id="book">Book</h2>
+<ul>
+<li>Salt, Fat, Acid, Heat: Mastering the Elements of Good Cooking</li>
+<li>Joy of Cooking</li>
+<li>The Flavor Bible: The Essential Guide to Culinary Creativity, Based on the Wisdom of America's Most Imaginative Chefs</li>
+<li>The Food Lab: Better Home Cooking Through Science</li>
+</ul>
+<h2 id="video">Video</h2>
+<p>https://www.youtube.com/watch?v=5EKw4k8hkHA&amp;ab_channel=FoodWishes
+https://www.youtube.com/playlist?list=PLopY4n17t8RD-xx0UdVqemiSa0sRfyX19
+https://www.youtube.com/watch?v=zhI7bQyTmHw&amp;t=393s&amp;ab_channel=NickDiGiovanni</p>
+<h1 id="music-plan">Music Plan</h1>
+<p>Ear training app (on iphone) :</p>
+<ul>
+<li>Rhythm Sight Reading Trainer (Read Rhythm); Rolfs Apps, Version 6.0; $2.99</li>
+<li>Hear It, Note It! The Aural IQ Game</li>
+</ul>
+<h2 id="music-theory-and-analysis">Music theory and analysis</h2>
+<p>https://www.musictheory.net/lessons
+https://www.coursera.org/learn/edinburgh-music-theory/home/week/1</p>
+<ul>
+<li>Twentieth-Century Harmony: Creative Aspects and Practice by vincent Persichetti</li>
+<li>Fundamentals of Musical Composition Arnold Schoenberg</li>
+<li>Classical Form: A Theory of Formal Functions for the Instrumental Music of Haydn, Mozart, and Beethoven</li>
+<li>Analyzing Classical Form: An Approach for the Classroom by William E. Caplin</li>
+<li>In the Process of Becoming: Analytic and Philosophical Perspectives on Form in Early Nineteenth-Century Music by Janet Schmalfeldt</li>
+<li>The Geometry of Musical Rhythm by Godfried T. Toussaint</li>
+<li>Analysis of Tonal Music: A Schenkerian Approach by Allen Cadwallader &amp; David Gagne</li>
+</ul>
+<h2 id="classical-music">Classical music</h2>
+<p>https://www.coursera.org/learn/introclassicalmusic/home/week/1</p>
+<ul>
+<li>Chopin: A Graded Practical Guide by Elizabeth Bailie</li>
+<li>Chopin: The Four Ballades by Jim Samson</li>
+<li>The Lives of the Great Composers by Harol C. Schonberg</li>
+<li>Classical Style: Haydn, Mozart, Beethoven by Charles Rosen</li>
+<li>The Romantic Generation (The Charles Eliot Norton Lectures) by Charles Rosen</li>
+<li>The Rest is Noise Listening to the Twentieth Century by Ross Alexander</li>
+<li>Shostakovich: A Life Remembered by Elizabeth Wilson</li>
+</ul>
+<h2 id="side-reading">Side reading</h2>
+<ul>
+<li>Improve your sight-reading series by Paul Harris (6 volumes)</li>
+<li>Mikrokosmos by Bela Bartok</li>
+<li>371 choral for piano by JS Bach</li>
+</ul>
+<h2 id="technique">Technique</h2>
+<ul>
+<li>CHARLES HANON: THE VIRTUOSO PIANIST IN SIXTY EXERCISES FOR THE PIANO (More easy)</li>
+<li>PISCHNA - TECHNICAL STUDIES: Pischna - Technical Studies (more difficult)</li>
+</ul>
+
+</body>
+</html>
