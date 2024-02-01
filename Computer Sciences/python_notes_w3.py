@@ -1,3 +1,4 @@
+
 """
  # Python syntaxe : 
      ## Python indentation
@@ -95,46 +96,68 @@
         possibilité d'ajouter une indexation dans l'arguments ex : {1}
     
     # \\
-        pour utiliser quellque chose d'illegal dans une string on le met après un \
+        pour utiliser quellque chose d'illegal dans une string on le met après un \\
     
     # Mehtods
         https://www.w3schools.com/python/python_strings_methods.asp
         you can use to modify your strings, create a new value, do not modify directly de strings
     
-    # Booleans
-        represente une valeur sur deux (true or false)
-        en python on peut comparer plusieur valeurs pour que le script renvoie une reponsonse boleene
-        On peut evaluer une valeur avec bool(), tout est vrai sauf les strings vide ou le num 0, les liste vide
-        aussi faux les __len__ qui retourne à 0
-        
-        Built-in fonction qui renvoie des boolene valeurs (ex : isinstance(x, int) => test si x est un entier)
-         
-    # Operators  
-     pour faire des opération sur les variables et les valeurs
-     Divisé en 8 groupes : 
-        - Arithmetic operators : valeurs numérique, mathematique basiques
-        - Assignment operators : pour associé valeurs aux variables
-        - Comparison operators : pour comparer deux valeurs
-        - Logical operators : combiner phrases logiques
-        - Identity operators : comparer des objets en fonction de leurs type et de leurs location
-        - Membership operators : tester si une séquence est présente dans un objet
-        - Bitwise operators : comparer binary num
-        - Operator precedence : decrive l'ordre d'application des operateur
+# Booleans
+    represente une valeur sur deux (true or false)
+    en python on peut comparer plusieur valeurs pour que le script renvoie une reponsonse boleene
+    On peut evaluer une valeur avec bool(), tout est vrai sauf les strings vide ou le num 0, les liste vide
+    aussi faux les __len__ qui retourne à 0
+    
+    Built-in fonction qui renvoie des boolene valeurs (ex : isinstance(x, int) => test si x est un entier)
+    
+# Operators  
+    pour faire des opération sur les variables et les valeurs
+    Divisé en 8 groupes : 
+    - Arithmetic operators : valeurs numérique, mathematique basiques
+    - Assignment operators : pour associé valeurs aux variables
+    - Comparison operators : pour comparer deux valeurs
+    - Logical operators : combiner phrases logiques
+    - Identity operators : comparer des objets en fonction de leurs type et de leurs location
+    - Membership operators : tester si une séquence est présente dans un objet
+    - Bitwise operators : comparer binary num
+    - Operator precedence : decrive l'ordre d'application des operateur
     https://www.w3schools.com/python/python_operators.asp 
     
-    # Lists
+# Lists
     manière de stocker plusieur items dans une variable
     une des quatres manière de stocker des collection d'info (avec tuple, set, dictionnaires)
-    crée avec des [] : var = ['this', 'is', 'list']
-    
-    les list sont ordonée (on un ordre qui ne changera pas, si on ajoute un truc, il est placé à la fin),
-    modifiable(on peut changer ajouter ou enlever un item) et accepte les doublons (parce que ordonée)
-    
-    
+    crée avec des [] : var = ['this', 'is', 'list'], info de n'importe quel types.
 
+    les list sont ordonée (on un ordre qui ne changera pas, si on ajoute un truc, il est placé à la fin)
+    on peut retrouver chaque objet avec print(obj[x]),
+    modifiable(on peut changer ajouter ou enlever un item) et accepte les doublons (parce que ordonée)
+
+    La longueur d'une list (nb d'objets dedans) peut être retrouver grace à len()
+    Le type (type()) de la variable est "list", possibilité de le spécifié : 
+        TL = list(('objet', 'other'))
+    
+    Pour changer la valeur d'un item specifique on le précise en créean une nouvelle variable
+        var = ['list', 'de', 'trucs']
+        var[2] = 'choses'
+    De la même manière on peut changer un rang avec[3:4]
+    
+    pour inserer un nouvelles objet on utilise la méthode .inster(x, items) (x la pos)
+    pour juste en ajouter un nv (à la fin)  : 
+    pour combiné 2 list : .extend(listenplus) mais marche aussi si c'est pas une liste (array)
+    
+    pour enlever un objets spécifique .remove("objet") (si plus d'un "objet" retire le premier)
+    enelevr a un indexe spécifique : .pop(x) si x pas spécifié retire le dernier
+    meme fonction le mot clefs del
+        del varlist[0] si indexe pas spécifié del la list complete
+    Pour vider la list on peut utiliser la methode .clear
+    
+    On peut loop en utilisant une for loop
+    
+    Pour crée une nouvelle list a partir d'une ancienne : on utilise comprhension
+        newlist = ["expression" for "item" in "iterable" if "condition" == True]
+        
+    methode : .sort() va renvoyer la list dans l'odre alphabetique (ou numérique)
+    si on veut dans l'autre sens on peut utiliser l'arguments "reverse = True"
 """
-x = 1
-if x is True:
-    print("yes")
-else:
-    print("no")
+var = "salut comment ca va ?"
+print(var)

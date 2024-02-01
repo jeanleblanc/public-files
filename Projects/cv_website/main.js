@@ -1,4 +1,8 @@
-function showMore() {
+
+
+
+// Toggle Full Text Function
+function toggleFullText() {
     var shortText = document.getElementById("shortText");
     var fullText = document.getElementById("fullText");
     var toggleButton = document.getElementById("toggleButton");
@@ -13,34 +17,91 @@ function showMore() {
         toggleButton.innerText = "More";
     }
 }
+document.addEventListener('DOMContentLoaded', function() {
+    // Combined functionality for DOMContentLoaded
 
-function showDescription(skill, event) {
-    var descriptionBubble = document.getElementById('descriptionBubble');
-    var skillBubbleRect = event.target.getBoundingClientRect();
+    // Typing Animation
+    const texts = ["Salut", "Ciao", "Hoi", "Hi! I'm Jean"];
+    let count = 0;
+    let index = 0;
+    let currentText = '';
+    let letter = '';
 
-    descriptionBubble.innerHTML = getDescription(skill);
-    descriptionBubble.classList.add('hovered');
-    descriptionBubble.style.left = skillBubbleRect.left + 'px'; // Align with the left of the skill bubble
-    descriptionBubble.style.top = (skillBubbleRect.top + skillBubbleRect.height + window.scrollY) + 'px'; // Position below the skill bubble
-}
+    (function type() {
+        if (count === texts.length) {
+            count = 0; // Corrected reset count
+        }
+        currentText = texts[count];
+        letter = currentText.slice(0, ++index);
 
-function hideDescription(event) {
-        var descriptionBubble = document.getElementById('descriptionBubble');
-        setTimeout(function() {
-            if (!descriptionBubble.matches(':hover')) {
-                descriptionBubble.classList.remove('hovered');
-            }
-        }, 10); // Small timeout to allow for checking hover state
+        document.querySelector('.animation-text-block').textContent = letter;
+        if (letter.length === currentText.length) {
+            count++;
+            index = 0;
+            setTimeout(type, 2000); // Delay before starting next text
+        } else {
+            setTimeout(type, currentText.length === letter.length ? 800 : 200); // Longer delay at the end of each word
+        }
+    }());
+
+    // URL Hash Replacement
+    if (window.location.hash !== '#first-page') {
+        history.replaceState(null, null, window.location.pathname + '#first-page');
+        window.location.reload();
     }
+});
 
-function getDescription(skill) {
-    // Return a description based on the skill
-    switch(skill) {
-        case 'Creativity':
-            return 'Ability to think outside the box.';
-        // Add cases for other skills
-        default:
-            return '';
-    }
+
+window.onload = function() {
+    // Replace the current URL with the base URL and add #first-page hash
+    history.replaceState(null, null, window.location.pathname + '#first-page');
+
+    // Your existing onload functionality for toggling text
+    var fullText = document.getElementById("fullText");
+    var shortText = document.getElementById("shortText");
+    fullText.style.display = "none";
+    shortText.style.display = "block";
+};
+
+document.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var windowHeight = window.innerHeight;
+    
+    // Adjust these selectors based on your HTML structure
+    var separators = document.querySelectorAll('.title-separator');
+
+    separators.forEach(function(separator) {
+        var separatorPosition = separator.getBoundingClientRect().top + scrollPosition;
+        
+        if (scrollPosition + windowHeight > separatorPosition) {
+            separator.style.width = '100%'; // Full width when the separator is in view
+        } else {
+            separator.style.width = '0'; // Reset when not in view
+        }
+    });
+});
+
+document.addEventListener('scroll', function() {
+    var sections = document.querySelectorAll('section');
+    var currentSectionText = ''; // Variable to store the active section text
+
+    sections.forEach(function(section) {
+        var sectionPosition = section.getBoundingClientRect().top;
+
+        if (sectionPosition < window.innerHeight / 2 && sectionPosition > -window.innerHeight / 2) {
+            currentSectionText = section.getAttribute('data-rolling-text'); // Assuming each section has a data-rolling-text attribute
+        }
+    });
+
+    // Update the text display element with the current section text
+    document.getElementById('rolling-text-display').textContent = currentSectionText;
+});
+
+// Array of colors for the background
+const colors = ["#f44336", "#e91e63", "#9c27b0", "#673ab7", "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4", "#009688", "#4caf50"];
+let colorIndex = 0;
+
+window.onscroll = function() {
+  document.body.style.backgroundColor = colors[colorIndex];
+  colorIndex = (colorIndex + 1) % colors.length;
 }
-

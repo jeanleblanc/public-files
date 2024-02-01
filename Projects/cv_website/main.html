@@ -5,151 +5,222 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jean Aboutboul - Personal CV</title>
     <link rel="stylesheet" href="main.css">
-    <!-- Add CSS for styling here -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico"> <!-- Add a favicon -->
+
+    <!-- Consolidated Google Fonts Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@900&family=Oswald:wght@500&family=Space+Mono&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <h1>Jean Aboutboul</h1>
-        <h3>Student | Science</h3>
-        <!-- Space for Photo -->
-        <div id="photo">Photo placeholder</div>
-    </header>
+<main>
 
-    <section>
-        <h2>About Me</h2>
-        <p>Languages: Français - Native, English - Professional Knowledge</p>
-        <p>Date of Birth: 26/09/2005</p>
-        <p>Nationality: [Your Nationality]</p>
-         
-        <div class="principal-interests">
-            <h3>Principal Interest and Skills</h3>
-            <!-- Add your principal interests and skills here -->
-        </div>
-  
-        <div id="shortText">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</div>
-<div id="fullText" style="display: none;">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</div>
-<button id="toggleButton" onclick="showMore()">More</button>
 
-        <div class="contacts">
-            <h3>Contacts</h3>
-            <p>Address: Chaussée de Waterloo 1143, 1180 (Uccle) Bruxelles</p>
-            <p>Email: jeanaboutboul@gmail.com</p>
-            <p>Alternate Email: jeanaboutboul@icloud.com</p>
-            <p>Phone: (+32) 470 66 60 43</p>
+    <!--FIRST PAGE-->
+    <section id="first-page">
+        <div id="first-page-container" class="container">
+
+            <div id="animation-text-block" class="animation-text-block"></div>
+
+            <div id="image-placeholder-block" class="image-placeholder-block">Picture not available for the moment</div>
+
+            <nav class="taskbar-first-page">
+                <a href="#about-me">About Me</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#experiences">Experiences</a>
+                <a href="#projects">Projects</a>
+            </nav>  
+
+            <a href="#last-page-section" class="contact-envelope"><img src="img/envelope.png" alt="Contact Me Envelope Icon"/></a> 
         </div>
     </section>
 
-    <section>
-    <a href="#education"><h1>Education</h1></a>
-    <p><strong>2019-now CESS</strong> <span class="location">Bruxelles</span><br>
-    École Decroly<br>
-    Mathématique and science maximum</p>
+
+
+
+
+
+
+    <!-- ABOUT ME SECTION-->
+
+    <section id="about-me">
+        <h1 id="about-me-title" class="title">About Me</h1>
+        <hr class="title-separator">
+        <div id="about-me-container" class="container">
+            <div id="about-me-block-1" class="block">
+
+                <h2>Info</h2>
+                <p>Languages: Français - Native, English - Professional Knowledge</p>
+                <p>Date of Birth: 26/09/2005</p>
+                <p>Nationality: [Your Nationality]</p>
+                <hr id="aboutmeleft-separator">
     
-    <p><strong>2017-2019 CE1D</strong> <span class="location">Bruxelles</span><br>
-    École Decroly<br>
-    First higher education until obteting the ”Certificat d’Étude du 1𝑒 Degrée”.</p>
+                <h2>Principal Interest and Skills</h2>
+                <!-- Principal Interests and Skills content here -->
     
-    <p><strong>2013-2017 CEB</strong> <span class="location">Bruxelles</span><br>
-    École Hamaïde<br>
-    Primary education until obteting the ”Certificat d’Études de Base”.</p>
-
-    <p><strong>2020-now Music theory</strong> <span class="location">Bruxelles</span><br>
-    Académie d’ixelles<br>
-    Music theory education at pre-conservatory level</p>
-</section>
-
-
-
-
-
-
-
-
-<section>
-    <h3>Soft Skills and Strengths</h3>
-    <div class="skills-bubble" onmouseenter="showDescription('Creativity', event)" onmouseleave="hideDescription(event)">Creativity</div>
-    <div class="skills-bubble">Curiosity</div>
-    <div class="skills-bubble">Flexibility</div>
-    <div class="skills-bubble">Impassioned</div>
-    <div class="skills-bubble">Ability to Plan and Organize</div>
-    <div class="skills-bubble">Autonomy</div>
-    <div class="skills-bubble">Adaptability</div>
-    <div class="skills-bubble">Likable</div>
-    <div class="skills-bubble">Problem Solving</div>
-    <div class="skills-bubble">Team Working</div>
-    <div class="skills-bubble">Love Learning New Things</div>
-    <div class="skills-bubble">Motivated</div>
-    <div class="skills-bubble">Ponctual</div>
-    <div class="skills-bubble">Managing Information</div>
-    <div class="skills-bubble">Diplomacy</div>
-    <div class="skills-bubble">Good Listener</div>
-    <div class="skills-bubble">Pleasant</div>
-</section>
-
-<div id="descriptionBubble" onmouseleave="hideDescription(event)" style="display: none;"></div>
-
-
-
-
-
-
-  <section>
-    <h1>Practical Skills and Knowledge</h1>
-    <ul>
-        <li><a href="#math">Math</a></li>
-        <li><a href="#physics">Physics</a></li>
-        <li><a href="#computerScience">Computer Science</a></li>
-        <li><a href="#ai">AI</a></li>
-        <li><a href="#neuroscience">Neuroscience and Computational Neuroscience</a></li>
-        <li><a href="#music">Music</a></li>
-    </ul>
-</section>
-
-
-   <section>
-    <h3>Other Skills</h3>
-    <ul>
-        <li>Cooking</li>
-        <li>Chess</li>
-        <li>Drawing</li>
-        <li>Basic Technology Skills (Excel, Photoshop, LaTeX, etc.)</li>
-    </ul>
-</section>
-
-
-    <section>
-    <h2>Experience</h2>
-    <p><strong>2018 Archivist assistant</strong> <span class="location">Bruxelles</span><br>
-    Doc Stock<br>
-    Archive image search on sites corresponding to a given description.</p>
-
-    <p><strong>2021 Music</strong> <span class="location">Bruxelles</span><br>
-    La calle de los musicos<br>
-    Pianist accompanist.</p>
-
-    <p><strong>2022 Restauration</strong> <span class="location">Bruxelles</span><br>
-    La Canne en Ville<br>
-    Dishwasher in a starred restaurant during an evening.</p>
-
-    <p><strong>2020-now Scout</strong> <span class="location">Bruxelles</span><br>
-    J.J.L.<br>
-    Youth guide in a Jewish youth movement</p>
-</section>
-
-
-    <section>
-        <a href="#projects"><h1>Projects</h1></a>
-        <!-- Projects details here -->
+            </div>
+    
+            <div id="about-me-block-2" class="block">
+                <h2>More About Me</h2>
+                <div id="shortText"><p>Lorem ipsum dolor sit amet...</p></div>
+                <div id="fullText" style="display: none;"><p>Extended Lorem ipsum text...</p></div>
+                <button id="toggleButton" onclick="toggleFullText()">More</button>        </div>
+        </div>
     </section>
 
-    <section>
-        <h3>Download the PDF</h3>
-        <!-- Link to download PDF version of CV -->
+
+
+
+
+    
+    <!-- EDUCATION SECTION-->
+    <section id="education" class="education-section">
+        <h1 id="education-title" class="title">Education</h1>
+        <hr class="title-separator">
+        <div class="container" id="education-container">
+            <div class="block" id="education-block-decroly">
+                <p><strong>2017-2019 CE1D</strong> Bruxelles
+                École Decroly<br>
+                First higher education until obteting the ”Certificat d’Étude du 1𝑒 Degrée”.</p>
+                Mathématique and science maximum</p>
+            </div>
+    
+            <div class="block" id="education-block-epfl">
+                <p><strong>2017-2019 CE1D</strong> Bruxelles
+                École Decroly<br>
+                First higher education until obteting the ”Certificat d’Étude du 1𝑒 Degrée”.</p>
+                Mathématique and science maximum</p>
+            </div>
+    
+            <div class="block" id="education-block-acaixelle">
+                <p><strong>2017-2019 CE1D</strong> Bruxelles
+                École Decroly<br>
+                First higher education until obteting the ”Certificat d’Étude du 1𝑒 Degrée”.</p>
+                Mathématique and science maximum</p>
+            </div>
+    
+            <div class="block" id="education-block-lyl">
+                <p><strong>2017-2019 CE1D</strong> Bruxelles
+                École Decroly<br>
+                First higher education until obteting the ”Certificat d’Étude du 1𝑒 Degrée”.</p>
+                Mathématique and science maximum</p>
+            </div>
+        </div>
     </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills-section">
+        <h1 id="skills-title" class="title">Skills</h1>
+        <hr class="title-separator">
+        <div id="skills-container" class="container">
+            <div id="soft-skill-block" class="block">
+                <h3 id="soft-skill-title">Soft Skills and Strengths</h3>
+                    <div class="skills-bubble">Creativity</div>
+                    <div class="skills-bubble">Curiosity</div>
+                    <div class="skills-bubble">Flexibility</div>
+                    <div class="skills-bubble">Impassioned</div>
+                    <div class="skills-bubble">Ability to Plan and Organize</div>
+                    <div class="skills-bubble">Autonomy</div>
+                    <div class="skills-bubble">Adaptability</div>
+                    <div class="skills-bubble">Likable</div>
+                    <div class="skills-bubble">Problem Solving</div>
+                    <div class="skills-bubble">Team Working</div>
+                    <div class="skills-bubble">Love Learning New Things</div>
+                    <div class="skills-bubble">Motivated</div>
+                    <div class="skills-bubble">Ponctual</div>
+                    <div class="skills-bubble">Managing Information</div>
+                    <div class="skills-bubble">Diplomacy</div>
+                    <div class="skills-bubble">Good Listener</div>
+                    <div class="skills-bubble">Pleasant</div>
+            </div>
+    
+            <div id="practical-skill-block" class="block">
+                <h2 id="practical-skill-title">Practical Skills and Knowledge</h2> 
+                    <div id="math-block" class="sub-block">Math</div>
+                    <div id="physics-block" class="sub-block">Physics</div>
+                    <div id="cs-block" class="sub-block">Computer Science</div>
+                    <div id="ai-block" class="sub-block">Artificial intelligence</div>
+                    <div id="ncn-block" class="sub-block">Neuroscience and Computationnal Neuroscience</div>
+                    <div id="music-block" class="sub-block">Music</div>
+    
+            </div>
+    
+            <div id="other-skill-block" class="block">
+                <h3 id="other-skill-title">Other Skills</h3>
+                    <ul>
+                        <li>Cooking</li>
+                        <li>Chess</li>
+                        <li>Drawing</li>
+                        <li>Basic Technology Skills (Excel, Photoshop, LaTeX, etc.)</li>
+                    </ul>
+            </div>
+        </div>
+    </section>
+
+    <!--EXPERIENCE SECTION-->
+    <section id="experiences" class="experience-section">
+        <h1 id="experience-title" class="title">Experience</h1>
+        <hr class="title-separator">
+        <div id="experience-container" class="container">
+            <div id="experience-block-1" class="block">
+                <p><strong>2018 Archivist assistant</strong><br>
+                    Doc Stock<br>
+                    Archive image search on sites corresponding to a given description.
+                </p>
+            </div>
+    
+            <div id="experience-block-1" class="block">
+                <p><strong>2018 Archivist assistant</strong><br>
+                    Doc Stock<br>
+                    Archive image search on sites corresponding to a given description.
+                </p>
+            </div>
+    
+            <div id="experience-block-2" class="block">
+                <p><strong>2018 Archivist assistant</strong><br>
+                    Doc Stock<br>
+                    Archive image search on sites corresponding to a given description.
+                </p>
+            </div>
+    
+            <div id="experience-block-3" class="block">
+                <p><strong>2018 Archivist assistant</strong><br>
+                    Doc Stock<br>
+                    Archive image search on sites corresponding to a given description.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <h1 id="projects-title" class="title">Projects</h1>
+        <hr class="title-separator">
+        <div id="projects-container" class="container">
+            <div id="projects-container" class="container">
+        </div>
+    </section>
+
+    <!-- LAST PAGE-->
+    <section id="last-page-section">
+        <div id="last-page-container" class="container">
+            <address id="contacts-block" class="block">
+                <h1>Contacts</h1>
+                <p>Address: Chaussée de Waterloo 1143, 1180 (Uccle) Bruxelles</p>
+                <p>Email: jeanaboutboul@gmail.com</p>
+                <p>Alternate Email: jeanaboutboul@icloud.com</p>
+                <p>Phone: (+32) 470 66 60 43</p>
+            </address>
+
+            <div id="download-block" class="block">
+                <h1>Download the PDF</h1>
+            </div>
+        </div>
+    </section>
+
+
 <script src="main.js"></script>
+</main>
 </body>
 </html>
+
