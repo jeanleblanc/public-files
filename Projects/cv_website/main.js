@@ -97,11 +97,3 @@ document.addEventListener('scroll', function() {
     document.getElementById('rolling-text-display').textContent = currentSectionText;
 });
 
-// Array of colors for the background
-const colors = ["#f44336", "#e91e63", "#9c27b0", "#673ab7", "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4", "#009688", "#4caf50"];
-let colorIndex = 0;
-
-window.onscroll = function() {
-  document.body.style.backgroundColor = colors[colorIndex];
-  colorIndex = (colorIndex + 1) % colors.length;
-}

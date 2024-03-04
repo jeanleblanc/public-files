@@ -76,11 +76,17 @@ https://youtu.be/Tn6-PIqc4UM?si=xn9FKiw8aykcTptn
 > https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 > https://github.com/getify/You-Dont-Know-JS
 
-- Latex
-> https://www.learnlatex.org/fr/
-> https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes
-
+Julia
+Timescript
+Rust
+Go
+C++
+HTML
+CSS
+Lua
+Ruby
 ## Tools 
+
 https://youtu.be/8PhdfcX9tG0?si=vE5jmTY9hCwgfb0J
 
 - Vim
